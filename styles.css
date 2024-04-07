@@ -1,0 +1,56 @@
+#game_interface{
+    width:800px;
+    height:450px;
+    border: 1px solid;
+    position: relative;
+    transform: scale(.6);
+}
+#player{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 350px;
+    background-image:url(./player.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.jump{
+    animation: player .5s infinite linear;
+}
+#enemy{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    animation: enemy 1.5s infinite linear;
+    background-image:url(./enemy.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@keyframes player{
+    0%{
+        top:350px;
+    }
+    
+    50%{
+        top:250px;
+    }
+    
+    80%{
+        top:250px;
+    }
+    
+    100%{
+        top:350px;
+    }
+}
+@keyframes enemy{
+    0%{
+        right:0;
+    }
+    100%{
+        right:100%;
+    }
+}
